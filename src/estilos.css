@@ -1,1 +1,416 @@
 /* Acá van a ir los estilos personalizados que vamos a usar para las distintas paginas */
+/* Estilos generales del cuerpo y del contenedor */
+body {
+    font-family: 'Roboto', sans-serif; /* Usando Roboto como ejemplo */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo gris claro */
+    color: #333;
+}
+
+.contenedor-principal {
+    max-width: 1200px; /* O ajusta según sea necesario */
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box; /* Incluye el padding en el ancho y alto total del elemento */
+}
+
+/* Barra de Navegación */
+.barra-navegacion {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+.barra-navegacion .contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-navegacion .logo-sitio {
+    display: flex;
+    align-items: center;
+}
+
+.barra-navegacion .logo-sitio img {
+    height: 40px; /* Ajusta el tamaño del logo */
+    margin-right: 10px;
+}
+
+.barra-navegacion .logo-sitio span {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #4CAF50; /* Color verde para "Eco" */
+}
+
+.barra-navegacion .menu-navegacion {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.barra-navegacion .menu-navegacion li {
+    margin-left: 30px;
+}
+
+.barra-navegacion .menu-navegacion li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.barra-navegacion .menu-navegacion li a:hover {
+    color: #4CAF50;
+}
+
+/* Sección Hero (principal) */
+.seccion-hero {
+    background-color: #e8f5e9; /* Fondo verde claro */
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden; /* Para contener la ilustración */
+    margin-top: 20px; /* Espacio desde la barra de navegación */
+}
+
+.seccion-hero .contenido-hero {
+    position: relative;
+    z-index: 1; /* Asegura que el texto esté encima de la ilustración */
+}
+
+.seccion-hero h1 {
+    font-size: 3em;
+    color: #2e7d32; /* Verde más oscuro para el título */
+    margin-bottom: 20px;
+}
+
+.seccion-hero img {
+    width: 80%; /* Ajusta el tamaño según sea necesario */
+    max-width: 800px; /* Ancho máximo para la ilustración */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Cajas de Información */
+.seccion-cajas-info {
+    padding: 40px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.seccion-cajas-info .contenedor-principal {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que las cajas se ajusten en pantallas más pequeñas */
+    gap: 20px; /* Espacio entre las cajas */
+}
+
+.tarjeta-info {
+    background-color: #4CAF50; /* Fondo verde para las cajas */
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px; /* Ancho fijo para consistencia, ajusta según sea necesario */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-info img {
+    height: 50px; /* Tamaño del icono */
+    margin-bottom: 10px;
+    filter: invert(100%); /* Hace que los iconos sean blancos si son oscuros */
+}
+
+.tarjeta-info p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Sección Logos de Universidades */
+.seccion-logos-universidad {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.seccion-logos-universidad .contenedor-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Espacio entre los logos */
+    flex-wrap: wrap;
+}
+
+.seccion-logos-universidad img {
+    max-height: 100px; /* Ajusta la altura del logo */
+    width: auto;
+}
+
+/* Sección Miembros del Equipo */
+.seccion-miembros-equipo {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.seccion-miembros-equipo .contenedor-principal {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta-miembro {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 180px; /* Ajusta el ancho según sea necesario */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tarjeta-miembro .avatar-miembro {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-avatar-placeholder); /* Esto ya no será tan visible, pero lo puedes mantener */
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    overflow: hidden; /* Muy importante para que la imagen no se salga del círculo */
+    display: flex; /* Para centrar la imagen dentro si es necesario */
+    align-items: center;
+    justify-content: center;
+    /* Quita font-size y color si ya no necesitas el texto placeholder */
+    font-size: 0; /* Para eliminar el texto placeholder */
+    color: transparent; /* Para eliminar el color del texto placeholder */
+}
+
+.tarjeta-miembro .avatar-miembro img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del círculo */
+    height: 100%; /* Asegura que la imagen ocupe todo el alto del círculo */
+    object-fit: cover; /* Mantiene la proporción. */
+    display: block; /* Elimina cualquier espacio extra por defecto de las imágenes */
+    border-radius: 50%; /* Asegura que la imagen también sea circular si el div padre lo es */
+}
+.tarjeta-miembro p {
+    margin: 10px 0;
+    font-weight: 600;
+    color: #555;
+}
+
+.tarjeta-miembro .enlace-github {
+    display: inline-block;
+    background-color: #0366d6; /* Azul de GitHub */
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta-miembro .enlace-github:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes de Responsividad */
+@media (max-width: 768px) {
+    .barra-navegacion .contenedor-principal {
+        flex-direction: column;
+    }
+
+    .barra-navegacion .menu-navegacion {
+        margin-top: 10px;
+    }
+
+    .barra-navegacion .menu-navegacion li {
+        margin: 0 15px;
+    }
+
+    .seccion-cajas-info .contenedor-principal,
+    .seccion-miembros-equipo .contenedor-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta-info, .tarjeta-miembro {
+        width: 80%; /* Hacerlos más anchos en pantallas más pequeñas */
+        max-width: 300px;
+    }
+
+    .seccion-logos-universidad .contenedor-principal {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .seccion-hero h1 {
+        font-size: 2.5em;
+    }
+}
+/* Estilos específicos para la página de Proyecto */
+.contenido-pagina-proyecto {
+    min-height: calc(100vh - var(--altura-barra-navegacion) - var(--altura-footer, 0px)); /* Ajusta la altura mínima para que el contenido ocupe la pantalla, restando la altura de la nav y el footer si existe */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    background-color: var(--color-fondo-blanco); /* Fondo blanco para esta sección */
+}
+
+.seccion-construccion {
+    padding: var(--espaciado-seccion);
+    text-align: center;
+    max-width: 600px; /* Limita el ancho del contenido para que no se estire demasiado */
+    margin: 0 auto;
+}
+
+.seccion-construccion .icono-construccion {
+    max-width: 100%; /* Asegura que la imagen sea responsiva */
+    height: auto;
+    display: block;
+    margin: 0 auto 30px; /* Espacio debajo del icono */
+}
+
+.seccion-construccion h2 {
+    font-size: 2.5em; /* Tamaño del texto "SITIO EN CONSTRUCCION" */
+    color: var(--color-texto-oscuro);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/* Estilos específicos para la página de Contacto */
+.contenido-pagina-contacto {
+    /* Puedes mantener el min-height si quieres que ocupe toda la pantalla */
+    min-height: calc(100vh - var(--altura-barra-navegacion) - var(--altura-footer, 0px));
+    background-color: var(--color-gris-claro); /* Fondo similar al body para esta página */
+    padding-bottom: var(--espaciado-seccion); /* Añade padding inferior para no pegar el contenido al final */
+}
+
+.seccion-formulario-contacto,
+.seccion-info-contacto {
+    padding: var(--espaciado-seccion);
+    text-align: center; /* Centra el texto y el formulario */
+    background-color: var(--color-fondo-blanco); /* Fondo blanco para las secciones */
+    margin-bottom: 20px; /* Espacio entre secciones */
+    box-shadow: var(--sombra-suave); /* Sombra ligera para las secciones */
+    border-radius: var(--radio-borde);
+}
+
+.seccion-formulario-contacto .contenedor-principal,
+.seccion-info-contacto .contenedor-principal {
+    max-width: 700px; /* Limita el ancho del contenido de las secciones */
+}
+
+.seccion-formulario-contacto h2,
+.seccion-info-contacto h3 {
+    font-size: 2em;
+    color: var(--color-secundario);
+    margin-bottom: 10px;
+}
+
+.seccion-formulario-contacto p {
+    font-size: 1.1em;
+    color: var(--color-texto-gris);
+    margin-bottom: 30px;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los campos del formulario */
+    text-align: left; /* Alinea las etiquetas y campos a la izquierda */
+}
+
+.grupo-formulario label {
+    display: block; /* Hace que la etiqueta ocupe su propia línea */
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--color-texto-oscuro);
+}
+
+.grupo-formulario input[type="text"],
+.grupo-formulario input[type="email"],
+.grupo-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-gris-border);
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho */
+    transition: border-color 0.3s ease;
+}
+
+.grupo-formulario input[type="text"]:focus,
+.grupo-formulario input[type="email"]:focus,
+.grupo-formulario textarea:focus {
+    border-color: var(--color-principal); /* Borde verde al enfocar */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+}
+
+.grupo-formulario textarea {
+    resize: vertical; /* Permite redimensionar el textarea solo verticalmente */
+}
+
+.boton-enviar {
+    background-color: var(--color-principal);
+    color: var(--color-fondo-blanco);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Centra el botón en el formulario flex */
+    margin-top: 20px;
+}
+
+.boton-enviar:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Estilos de la Información de Contacto */
+.seccion-info-contacto {
+    margin-top: 40px; /* Espacio superior para separarla de la sección del formulario */
+}
+
+.info-item {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: var(--color-texto-gris);
+}
+
+.info-item strong {
+    color: var(--color-texto-oscuro);
+}
+
+.mapa-contacto {
+    margin-top: 30px;
+    border-radius: var(--radio-borde);
+    overflow: hidden; /* Asegura que el iframe respete el border-radius */
+}
+
+.mapa-contacto iframe {
+    border-radius: var(--radio-borde); /* Aplica border-radius también al iframe */
+}
+
+/* Ajustes de Responsividad */
+@media (max-width: 600px) {
+    .seccion-formulario-contacto h2,
+    .seccion-info-contacto h3 {
+        font-size: 1.8em;
+    }
+    .formulario-contacto {
+        padding: 0 10px; /* Ajusta el padding para que no se pegue tanto a los bordes */
+    }
+}
