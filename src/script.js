@@ -35,3 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     });
+
+  document.querySelectorAll('.color-box').forEach(box => {
+    box.addEventListener('click', () => {
+      const color = box.getAttribute('data-color');
+      const contenedor = document.querySelector('.seccion-visual .contenedor');
+      contenedor.style.backgroundColor = color;
+    });
+  });

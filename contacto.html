@@ -12,14 +12,13 @@
         <div class="contenedor-principal">
             <div class="logo-sitio">
                 <img src="./src/images/eco_logo.png" alt="Logo Eco">
-                <span>Eco</span>
             </div>
             <nav>
                 <ul class="menu-navegacion">
-                    <li><a href="index.html">INICIO</a></li>
-                    <li><a href="#">AVANCES</a></li>
-                    <li><a href="proyecto.html">PROYECTO</a></li>
-                    <li><a href="contacto.html">CONTACTO</a></li> </ul>
+                    <li><a href="./index.html">INICIO</a></li>
+                    <li><a href="./avances.html">AVANCES</a></li>
+                    <li><a href="./proyecto.html">PROYECTO</a></li>
+                    <li><a href="./contacto.html">CONTACTO</a></li> </ul>
             </nav>
         </div>
     </header>
@@ -29,7 +28,7 @@
             <div class="contenedor-principal">
                 <h2>Contáctanos</h2>
                 <p>Envíanos un mensaje y te responderemos a la brevedad.</p>
-                <form action="#" method="POST" class="formulario-contacto">
+                <form action="mailto:info@ecoferia.com" method="GET" class="formulario-contacto">
                     <div class="grupo-formulario">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" required>
@@ -40,11 +39,11 @@
                     </div>
                     <div class="grupo-formulario">
                         <label for="asunto">Asunto:</label>
-                        <input type="text" id="asunto" name="asunto">
+                        <input type="text" id="asunto" name="subject">
                     </div>
                     <div class="grupo-formulario">
                         <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                        <textarea id="mensaje" name="body" rows="6" required></textarea>
                     </div>
                     <button type="submit" class="boton-enviar">Enviar Mensaje</button>
                 </form>
