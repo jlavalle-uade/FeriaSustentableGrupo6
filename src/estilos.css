@@ -17,7 +17,7 @@ body {
 
 /* Barra de Navegación */
 .barra-navegacion {
-    background-color: #fff;
+    background-color: #fafafa;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
@@ -362,8 +362,8 @@ body {
 }
 
 .boton-enviar {
-    background-color: var(--color-principal);
-    color: var(--color-fondo-blanco);
+    background-color: #4CAF50;
+    color: #fafafa;
     padding: 12px 25px;
     border: none;
     border-radius: 5px;
@@ -376,7 +376,7 @@ body {
 }
 
 .boton-enviar:hover {
-    background-color: var(--color-secundario);
+    background-color: #2e7d32
 }
 
 /* Estilos de la Información de Contacto */
@@ -413,4 +413,79 @@ body {
     .formulario-contacto {
         padding: 0 10px; /* Ajusta el padding para que no se pegue tanto a los bordes */
     }
+}
+
+.seccion-visual,
+.seccion-mapa-sitio,
+.seccion-prototipo,
+.seccion-organizacion,
+.seccion-texto-introductorio {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.seccion-visual .contenedor,
+.seccion-mapa-sitio .contenedor,
+.seccion-prototipo .contenedor,
+.seccion-organizacion .contenedor,
+.seccion-texto-introductorio .contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.seccion-texto-introductorio{
+    margin-top: 20px;
+}
+
+/* Estilo para imágenes de secciones */
+.seccion-visual img {
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px; /* Paleta de colores */
+}
+
+.seccion-visual img:last-of-type {
+    max-width: 300px; /* Logo más pequeño */
+}
+
+/* Mapa del sitio */
+.seccion-mapa-sitio img {
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Link Figma */
+.seccion-prototipo a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.seccion-prototipo a:hover {
+    background-color: #388E3C;
+}
+
+/* Organización del equipo */
+.seccion-organizacion ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+.seccion-organizacion li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
